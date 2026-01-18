@@ -4,17 +4,6 @@ export default function ProblemSolutionSection() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-6 leading-tight tracking-tight">
-            WIR VERSTEHEN<br/>
-            IHR PROBLEM.
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Viele Fahrzeugbesitzer kämpfen mit mittelmäßiger Audioqualität, veralteten Systemen
-            und unsachgemäßen Installationen. Aber das muss nicht sein.
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           <div className="bg-white p-12 rounded-xl border-4 border-black shadow-2xl hover:shadow-red-600/20 transition-all">
             <h3 className="text-3xl font-black text-black mb-8">OHNE UNS</h3>
