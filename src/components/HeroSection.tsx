@@ -11,7 +11,7 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-8 relative z-10">
+          <div className="space-y-8 relative z-10 order-1">
             <div className="inline-block">
               <span className="bg-red-600 text-white px-4 py-2 text-xs font-black tracking-wider">
                 #1 CAR AUDIO SPEZIALIST IN VEITSHÖCHHEIM
@@ -52,7 +52,7 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
             </div>
           </div>
 
-          <div className="relative animate-fade-in-up" style={{ animationDelay: '0.3s', opacity: 0 }}>
+          <div className="relative animate-fade-in-up order-2" style={{ animationDelay: '0.3s', opacity: 0 }}>
             <div className="relative group">
               <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-red-600 to-red-800 z-0 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 rounded-3xl"></div>
               <img
