@@ -26,32 +26,49 @@ export default function Navigation({ onOpenForm }: NavigationProps) {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img src="/aufkleber_-_eric_volk_(1).ai.png" alt="Sound Garage Logo" className="h-12 w-auto" />
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('leistungen')} className="text-black hover:text-red-600 transition-colors font-bold text-sm">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <button
+              onClick={() => scrollToSection('leistungen')}
+              className="text-black hover:text-red-600 transition-colors font-bold text-sm uppercase tracking-wide"
+            >
               Leistungen
             </button>
-            <button onClick={() => scrollToSection('prozess')} className="text-black hover:text-red-600 transition-colors font-bold text-sm">
+            <button
+              onClick={() => scrollToSection('prozess')}
+              className="text-black hover:text-red-600 transition-colors font-bold text-sm uppercase tracking-wide"
+            >
               Prozess
             </button>
-            <button onClick={() => scrollToSection('referenzen')} className="text-black hover:text-red-600 transition-colors font-bold text-sm">
+            <button
+              onClick={() => scrollToSection('referenzen')}
+              className="text-black hover:text-red-600 transition-colors font-bold text-sm uppercase tracking-wide"
+            >
               Referenzen
             </button>
-            <button onClick={() => scrollToSection('faq')} className="text-black hover:text-red-600 transition-colors font-bold text-sm">
+            <button
+              onClick={() => scrollToSection('faq')}
+              className="text-black hover:text-red-600 transition-colors font-bold text-sm uppercase tracking-wide"
+            >
               FAQ
             </button>
-            <button onClick={() => scrollToSection('kontakt')} className="text-black hover:text-red-600 transition-colors font-bold text-sm">
+            <button
+              onClick={() => scrollToSection('kontakt')}
+              className="text-black hover:text-red-600 transition-colors font-bold text-sm uppercase tracking-wide"
+            >
               Kontakt
             </button>
             <button
               onClick={onOpenForm}
-              className="bg-black text-white px-6 py-3 hover:bg-red-600 transition-all font-black text-sm tracking-wide border-2 border-black hover:border-red-600"
+              className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all font-black text-sm tracking-wide shadow-lg hover:shadow-xl"
             >
               JETZT ANFRAGEN
             </button>
