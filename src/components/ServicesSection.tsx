@@ -59,7 +59,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="leistungen" className="py-20 bg-[#1a1a1a]">
+    <section id="leistungen" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-white via-gray-50 to-white p-12 mb-16 rounded-3xl shadow-2xl overflow-hidden relative group">
           <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/10 rounded-full -mr-32 -mt-32 group-hover:scale-150 transition-transform duration-1000 animate-float-slow"></div>
