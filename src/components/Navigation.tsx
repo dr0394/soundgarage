@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Volume2, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavigationProps {
   onOpenForm: () => void;
@@ -29,8 +29,8 @@ export default function Navigation({ onOpenForm }: NavigationProps) {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <Volume2 className="w-8 h-8 text-black" />
+          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img src="/aufkleber_-_eric_volk_(1).ai.png" alt="Sound Garage Logo" className="h-12 w-auto" />
             <div className="text-2xl font-black tracking-tighter text-black">SOUND-GARAGE</div>
           </div>
 
