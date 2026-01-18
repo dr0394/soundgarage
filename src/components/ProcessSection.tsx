@@ -1,0 +1,85 @@
+import { Phone, MessageSquare, Calendar, Wrench, CheckCircle } from 'lucide-react';
+
+export default function ProcessSection() {
+  const steps = [
+    {
+      icon: Phone,
+      number: '01',
+      title: 'Kontaktaufnahme',
+      description: 'Nehmen Sie per Telefon, E-Mail oder Kontaktformular mit uns Kontakt auf. Wir melden uns zeitnah bei Ihnen zurück.'
+    },
+    {
+      icon: MessageSquare,
+      number: '02',
+      title: 'Bedarfsanalyse',
+      description: 'In einem persönlichen Gespräch besprechen wir Ihre Wünsche und Anforderungen. Wir zeigen Ihnen verschiedene Lösungsmöglichkeiten auf.'
+    },
+    {
+      icon: Calendar,
+      number: '03',
+      title: 'Angebot & Terminvereinbarung',
+      description: 'Sie erhalten ein transparentes Angebot mit allen Kosten. Anschließend vereinbaren wir einen passenden Termin für die Installation.'
+    },
+    {
+      icon: Wrench,
+      number: '04',
+      title: 'Fachgerechte Installation',
+      description: 'Unsere Techniker installieren die gewählten Komponenten professionell und ohne Schäden an Ihrem Fahrzeug.'
+    },
+    {
+      icon: CheckCircle,
+      number: '05',
+      title: 'Übergabe & Einweisung',
+      description: 'Nach erfolgreicher Installation erhalten Sie eine ausführliche Einweisung und Ihr Fahrzeug zurück – perfekt ausgestattet!'
+    }
+  ];
+
+  return (
+    <section id="prozess" className="py-20 bg-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-white via-gray-50 to-white p-12 mb-16 rounded-xl shadow-2xl">
+          <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight">
+            SO EINFACH GEHT'S
+          </h2>
+          <p className="text-lg text-gray-700">
+            In 5 Schritten zu Ihrem perfekten Sound- und Sicherheitssystem
+          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mt-4"></div>
+        </div>
+
+        <div className="relative">
+          <div className="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
+          <div className="grid md:grid-cols-5 gap-8 relative z-10">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-3xl text-center hover:bg-gradient-to-br hover:from-red-600 hover:to-red-800 hover:text-white group transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-3 relative overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative mx-auto mb-6 w-20 h-20 bg-gradient-to-br from-black to-gray-800 rounded-2xl group-hover:bg-white flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-125 transition-all duration-500 relative z-10">
+                  <step.icon className="w-10 h-10 text-white group-hover:text-black transition-colors duration-300" />
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-red-600 to-red-800 rounded-xl group-hover:bg-gradient-to-br group-hover:from-black group-hover:to-gray-800 text-white flex items-center justify-center text-sm font-black shadow-lg group-hover:animate-pulse">
+                    {step.number}
+                  </div>
+                </div>
+                <h3 className="text-lg font-black text-black group-hover:text-white mb-3 tracking-tight transition-colors duration-300 relative z-10">{step.title}</h3>
+                <p className="text-sm text-gray-700 group-hover:text-white leading-relaxed font-medium transition-colors duration-300 relative z-10">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <a
+            href="tel:09313538565"
+            className="inline-flex items-center space-x-2 bg-red-600 text-white px-8 py-4 rounded-xl hover:bg-red-700 transition-all font-black text-lg"
+          >
+            <Phone className="w-5 h-5" />
+            <span>JETZT ANRUFEN: 0931-3538565</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
