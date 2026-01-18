@@ -10,9 +10,9 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
       <div className="absolute top-0 left-0 w-full h-32 bg-white"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16 pb-20">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
-          {/* Badge & Headline - Order 1 */}
-          <div className="space-y-8 relative z-10 w-full order-1">
+        <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+          {/* Left Column - All Text Content */}
+          <div className="flex-1 space-y-8 relative z-10 w-full text-center lg:text-left">
             <div className="inline-block">
               <span className="bg-red-600 text-white px-4 py-2 text-xs font-black tracking-wider">
                 #1 CAR AUDIO SPEZIALIST IN VEITSHÖCHHEIM
@@ -23,35 +23,19 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
               IHR FAHRZEUG<br />
               VERDIENT MEHR
             </h1>
-          </div>
 
-          {/* Image - Order 2 on mobile, Order 3 on desktop */}
-          <div className="relative animate-fade-in-up w-full order-2 lg:order-3 lg:row-span-2" style={{ animationDelay: '0.3s', opacity: 0 }}>
-            <div className="relative group">
-              <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-red-600 to-red-800 z-0 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 rounded-3xl"></div>
-              <img
-                src="https://i.imgur.com/mhXtPeP.jpeg"
-                alt="Premium Car Audio Installation"
-                className="relative z-10 w-full h-[500px] object-cover shadow-2xl transition-all duration-500 group-hover:scale-[1.02] rounded-3xl"
-              />
-              <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
-            </div>
-          </div>
-
-          {/* Description, Button & Reviews - Order 3 on mobile, Order 2 on desktop */}
-          <div className="space-y-8 relative z-10 w-full order-3 lg:order-2">
-            <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
               Als führender Car-HiFi-Spezialist in Unterfranken realisieren wir seit Jahrzehnten hochwertige und individuelle Fahrzeuglösungen – von Soundsystemen über Apple CarPlay & Android Auto bis hin zu Alarmanlagen und Reisemobiltechnik.
             </p>
 
             <button
               onClick={onOpenForm}
-              className="bg-red-600 text-white px-8 py-4 rounded-2xl hover:bg-red-700 transition-all font-black text-lg tracking-wide inline-block shadow-2xl hover:shadow-red-600/50 hover:scale-105 hover:-translate-y-1"
+              className="bg-red-600 text-white px-8 py-4 rounded-2xl hover:bg-red-700 transition-all font-black text-lg tracking-wide shadow-2xl hover:shadow-red-600/50 hover:scale-105 hover:-translate-y-1"
             >
               JETZT BERATUNGSTERMIN VEREINBAREN
             </button>
 
-            <div className="flex items-center space-x-4 group/item hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="flex items-center space-x-4 group/item hover:scale-105 transition-all duration-300 cursor-pointer justify-center lg:justify-start">
               <svg viewBox="0 0 24 24" className="w-10 h-10 animate-float">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -66,6 +50,19 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
                 </div>
                 <p className="text-sm text-gray-300 font-bold">50+ Google Bewertungen</p>
               </div>
+            </div>
+          </div>
+
+          {/* Right Column - Image */}
+          <div className="flex-1 relative animate-fade-in-up w-full" style={{ animationDelay: '0.3s', opacity: 0 }}>
+            <div className="relative group">
+              <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-red-600 to-red-800 z-0 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 rounded-3xl"></div>
+              <img
+                src="https://i.imgur.com/mhXtPeP.jpeg"
+                alt="Premium Car Audio Installation"
+                className="relative z-10 w-full h-[500px] object-cover shadow-2xl transition-all duration-500 group-hover:scale-[1.02] rounded-3xl"
+              />
+              <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
             </div>
           </div>
         </div>
