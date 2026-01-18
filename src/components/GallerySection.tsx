@@ -134,7 +134,7 @@ export default function GallerySection() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-black via-gray-900 to-black p-12 mb-16 rounded-3xl shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/20 rounded-full -mr-32 -mt-32 animate-float-slow"></div>
