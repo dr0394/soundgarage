@@ -53,18 +53,17 @@ export default function ProcessSection() {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-3xl text-center hover:bg-gradient-to-br hover:from-red-600 hover:to-red-800 hover:text-white group transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-3 relative overflow-hidden min-h-[340px] flex flex-col"
+                className="p-6 text-center group transition-all duration-500 hover:-translate-y-3 relative min-h-[340px] flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative mx-auto mb-6 w-20 h-20 bg-gradient-to-br from-black to-gray-800 rounded-2xl group-hover:bg-white flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-125 transition-all duration-500 relative z-10 flex-shrink-0">
-                  <step.icon className="w-10 h-10 text-white group-hover:text-black transition-colors duration-300" />
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-red-600 to-red-800 rounded-xl group-hover:bg-gradient-to-br group-hover:from-black group-hover:to-gray-800 text-white flex items-center justify-center text-sm font-black shadow-lg group-hover:animate-pulse">
+                <div className="relative mx-auto mb-6 w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl group-hover:scale-125 flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:shadow-red-600/50 transition-all duration-500 relative z-10 flex-shrink-0">
+                  <step.icon className="w-10 h-10 text-white transition-transform duration-300 group-hover:scale-110" />
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-white text-black rounded-xl flex items-center justify-center text-sm font-black shadow-lg group-hover:animate-pulse">
                     {step.number}
                   </div>
                 </div>
-                <h3 className="text-lg font-black text-black group-hover:text-white mb-3 tracking-tight transition-colors duration-300 relative z-10 break-words hyphens-auto">{step.title}</h3>
-                <p className="text-sm text-gray-700 group-hover:text-white leading-relaxed font-medium transition-colors duration-300 relative z-10 break-words hyphens-auto">{step.description}</p>
+                <h3 className="text-lg font-black text-white mb-3 tracking-tight transition-colors duration-300 relative z-10 break-words hyphens-auto">{step.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed font-medium transition-colors duration-300 relative z-10 break-words hyphens-auto">{step.description}</p>
               </div>
             ))}
           </div>
