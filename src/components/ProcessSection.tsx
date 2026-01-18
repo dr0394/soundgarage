@@ -49,11 +49,11 @@ export default function ProcessSection() {
 
         <div className="relative">
           <div className="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
-          <div className="grid md:grid-cols-5 gap-8 relative z-10">
+          <div className="grid md:grid-cols-5 gap-4 relative z-10">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="p-6 text-center group transition-all duration-500 hover:-translate-y-3 relative min-h-[340px] flex flex-col"
+                className="p-3 text-center group transition-all duration-500 hover:-translate-y-3 relative min-h-[340px] flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative mx-auto mb-6 w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl group-hover:scale-125 flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:shadow-red-600/50 transition-all duration-500 relative z-10 flex-shrink-0">
