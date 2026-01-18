@@ -8,7 +8,6 @@ import GallerySection from './components/GallerySection';
 import WhyUsSection from './components/WhyUsSection';
 import ProcessSection from './components/ProcessSection';
 import SocialProofSection from './components/SocialProofSection';
-import BenefitsSection from './components/BenefitsSection';
 import FAQSection from './components/FAQSection';
 import CTASection from './components/CTASection';
 import ContactSection from './components/ContactSection';
@@ -31,7 +30,6 @@ function App() {
       <TargetAudienceSection />
       <ProcessSection />
       <SocialProofSection />
-      <BenefitsSection />
       <FAQSection />
       <CTASection onOpenForm={() => setIsFormOpen(true)} />
       <ContactSection />
