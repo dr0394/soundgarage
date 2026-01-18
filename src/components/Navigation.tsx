@@ -31,8 +31,8 @@ export default function Navigation({ onOpenForm }: NavigationProps) {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <Volume2 className="w-8 h-8 text-red-600" />
+          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img src="/aufkleber_-_eric_volk_(1).ai copy copy.png" alt="Sound-Garage Logo" className="h-12 w-auto" />
             <div className="text-2xl font-black tracking-tighter text-black">SOUND-GARAGE</div>
           </div>
 
