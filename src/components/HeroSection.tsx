@@ -10,8 +10,9 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
       <div className="absolute top-0 left-0 w-full h-32 bg-white"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-8 relative z-10 order-1">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
+          {/* Badge & Headline - Order 1 on mobile */}
+          <div className="space-y-8 relative z-10 order-1 lg:order-1 w-full">
             <div className="inline-block">
               <span className="bg-red-600 text-white px-4 py-2 text-xs font-black tracking-wider">
                 #1 CAR AUDIO SPEZIALIST IN VEITSHÖCHHEIM
@@ -22,7 +23,23 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
               IHR FAHRZEUG<br />
               VERDIENT MEHR
             </h1>
+          </div>
 
+          {/* Image - Order 2 on mobile, stays right on desktop */}
+          <div className="relative animate-fade-in-up order-2 lg:order-3 lg:row-span-2 w-full" style={{ animationDelay: '0.3s', opacity: 0 }}>
+            <div className="relative group">
+              <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-red-600 to-red-800 z-0 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 rounded-3xl"></div>
+              <img
+                src="https://i.imgur.com/mhXtPeP.jpeg"
+                alt="Premium Car Audio Installation"
+                className="relative z-10 w-full h-[500px] object-cover shadow-2xl transition-all duration-500 group-hover:scale-[1.02] rounded-3xl"
+              />
+              <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
+            </div>
+          </div>
+
+          {/* Description, Button & Reviews - Order 3 on mobile */}
+          <div className="space-y-8 relative z-10 order-3 lg:order-2 w-full">
             <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
               Als führender Car-HiFi-Spezialist in Unterfranken realisieren wir seit Jahrzehnten hochwertige und individuelle Fahrzeuglösungen – von Soundsystemen über Apple CarPlay & Android Auto bis hin zu Alarmanlagen und Reisemobiltechnik.
             </p>
@@ -49,18 +66,6 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
                 </div>
                 <p className="text-sm text-gray-300 font-bold">50+ Google Bewertungen</p>
               </div>
-            </div>
-          </div>
-
-          <div className="relative animate-fade-in-up order-2 -mt-8 lg:mt-0" style={{ animationDelay: '0.3s', opacity: 0 }}>
-            <div className="relative group">
-              <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-red-600 to-red-800 z-0 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 rounded-3xl"></div>
-              <img
-                src="https://i.imgur.com/mhXtPeP.jpeg"
-                alt="Premium Car Audio Installation"
-                className="relative z-10 w-full h-[500px] object-cover shadow-2xl transition-all duration-500 group-hover:scale-[1.02] rounded-3xl"
-              />
-              <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
             </div>
           </div>
         </div>
