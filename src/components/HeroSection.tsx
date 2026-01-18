@@ -63,20 +63,6 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
               <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
             </div>
 
-            <div className="bg-gradient-to-br from-red-600 to-red-800 text-white p-8 mt-8 rounded-3xl shadow-2xl hover:shadow-red-900/50 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-shimmer"></div>
-              <h3 className="text-2xl font-black mb-4 relative z-10">PREMIUM SOUND. PERFEKTE INSTALLATION.</h3>
-              <p className="text-white/90 mb-4 relative z-10">
-                Ihr Fahrzeug verdient mehr. Erleben Sie kristallklaren Sound und professionelle Installation
-                durch unsere Experten in Veitshöchheim.
-              </p>
-              <button onClick={() => {
-                const element = document.getElementById('leistungen');
-                element?.scrollIntoView({ behavior: 'smooth' });
-              }} className="text-white font-black hover:underline inline-flex items-center group relative z-10">
-                MEHR ERFAHREN <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
-              </button>
-            </div>
           </div>
         </div>
 
