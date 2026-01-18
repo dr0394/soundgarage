@@ -66,7 +66,10 @@ export default function GallerySection() {
               UNSERE ARBEITEN
             </h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 relative z-10"></div>
+          <p className="text-lg text-gray-300 max-w-3xl relative z-10">
+            Ein Einblick in unsere professionellen Installationen und hochwertigen Lösungen
+          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mt-4 relative z-10"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
