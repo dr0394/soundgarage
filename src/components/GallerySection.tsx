@@ -1,8 +1,12 @@
-import { Camera } from 'lucide-react';
-import { useState } from 'react';
+import { Camera, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const images = [
     {
@@ -55,6 +59,80 @@ export default function GallerySection() {
     }
   ];
 
+  const itemsPerSlide = {
+    mobile: 1,
+    tablet: 2,
+    desktop: 3
+  };
+
+  const [itemsToShow, setItemsToShow] = useState(itemsPerSlide.desktop);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsToShow(itemsPerSlide.mobile);
+      } else if (window.innerWidth < 1024) {
+        setItemsToShow(itemsPerSlide.tablet);
+      } else {
+        setItemsToShow(itemsPerSlide.desktop);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalSlides = Math.ceil(images.length / itemsToShow);
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, totalSlides]);
+
+  const nextSlide = () => {
+    setIsAutoPlaying(false);
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setIsAutoPlaying(false);
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const goToSlide = (index: number) => {
+    setIsAutoPlaying(false);
+    setCurrentSlide(index);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 75) {
+      nextSlide();
+    }
+
+    if (touchStart - touchEnd < -75) {
+      prevSlide();
+    }
+  };
+
+  const getCurrentImages = () => {
+    const startIndex = currentSlide * itemsToShow;
+    return images.slice(startIndex, startIndex + itemsToShow);
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,28 +150,80 @@ export default function GallerySection() {
           <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mt-4 relative z-10"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {images.map((image, index) => (
+        <div className="relative">
+          <div
+            className="overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div
-              key={index}
-              className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-              onClick={() => setSelectedImage(image.url)}
+              className="flex transition-transform duration-700 ease-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              <div className="aspect-square">
-                <img
-                  src={image.url}
-                  alt={image.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
-                <p className="text-white font-black text-sm tracking-wide">{image.title}</p>
-              </div>
-              <div className="absolute top-2 right-2 w-10 h-10 bg-red-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-110">
-                <Camera className="w-5 h-5 text-white" />
-              </div>
+              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+                <div
+                  key={slideIndex}
+                  className="min-w-full flex gap-4 px-2"
+                >
+                  {images
+                    .slice(slideIndex * itemsToShow, (slideIndex + 1) * itemsToShow)
+                    .map((image, imageIndex) => (
+                      <div
+                        key={imageIndex}
+                        className="flex-1 relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                        onClick={() => setSelectedImage(image.url)}
+                      >
+                        <div className="aspect-[4/3]">
+                          <img
+                            src={image.url}
+                            alt={image.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                          <p className="text-white font-black text-lg tracking-wide">{image.title}</p>
+                        </div>
+                        <div className="absolute top-3 right-3 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-110">
+                          <Camera className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-14 h-14 bg-black/80 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-110 z-10"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-7 h-7" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-14 h-14 bg-black/80 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-110 z-10"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-7 h-7" />
+          </button>
+
+          <div className="flex justify-center mt-8 gap-2">
+            {Array.from({ length: totalSlides }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index
+                    ? 'w-12 bg-red-600'
+                    : 'w-3 bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
