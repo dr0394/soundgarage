@@ -49,20 +49,20 @@ export default function ProcessSection() {
 
         <div className="relative">
           <div className="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
-          <div className="grid md:grid-cols-5 gap-4 relative z-10">
+          <div className="grid md:grid-cols-5 gap-1 relative z-10">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="p-3 text-center group transition-all duration-500 hover:-translate-y-3 relative min-h-[340px] flex flex-col"
+                className="p-2 text-center group transition-all duration-500 hover:-translate-y-3 relative min-h-[340px] flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative mx-auto mb-6 w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl group-hover:scale-125 flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:shadow-red-600/50 transition-all duration-500 relative z-10 flex-shrink-0">
+                <div className="relative mx-auto mb-2 w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl group-hover:scale-125 flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:shadow-red-600/50 transition-all duration-500 relative z-10 flex-shrink-0">
                   <step.icon className="w-10 h-10 text-white transition-transform duration-300 group-hover:scale-110" />
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-white text-black rounded-xl flex items-center justify-center text-sm font-black shadow-lg group-hover:animate-pulse">
                     {step.number}
                   </div>
                 </div>
-                <h3 className="text-lg font-black text-white mb-3 tracking-tight transition-colors duration-300 relative z-10 break-words hyphens-auto">{step.title}</h3>
+                <h3 className="text-lg font-black text-white mb-2 tracking-tight transition-colors duration-300 relative z-10 break-words hyphens-auto">{step.title}</h3>
                 <p className="text-sm text-gray-300 leading-relaxed font-medium transition-colors duration-300 relative z-10 break-words hyphens-auto">{step.description}</p>
               </div>
             ))}
