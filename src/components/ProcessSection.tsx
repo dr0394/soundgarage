@@ -21,7 +21,7 @@ export default function ProcessSection() {
       const stepsHeight = stepsRect.height;
 
       if (sectionTop < viewportHeight && sectionTop + sectionHeight > 0) {
-        const scrollProgress = Math.max(0, Math.min(1, (viewportHeight - sectionTop - 200) / (stepsHeight - 100)));
+        const scrollProgress = Math.max(0, Math.min(1, (viewportHeight - sectionTop - 400) / (stepsHeight + 200)));
         setSpeakerPosition(scrollProgress * 100);
       }
     };
