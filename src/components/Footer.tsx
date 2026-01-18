@@ -9,9 +9,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center mb-4">
               <img src="/aufkleber_-_eric_volk_(1).ai copy copy.png" alt="Sound-Garage Logo" className="h-12 w-auto" />
-              <div className="text-2xl font-black tracking-tighter">SOUND-GARAGE</div>
             </div>
             <p className="text-gray-400 mb-4 max-w-md font-medium">
               Ihr Spezialist für Car HiFi, Navigationssysteme und Alarmanlagen in Veitshöchheim.
