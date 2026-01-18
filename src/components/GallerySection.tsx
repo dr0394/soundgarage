@@ -136,15 +136,15 @@ export default function GallerySection() {
   return (
     <section className="py-20 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-black via-gray-900 to-black p-12 mb-16 rounded-3xl shadow-2xl relative overflow-hidden group">
+        <div className="bg-gradient-to-r from-white via-gray-50 to-white p-12 mb-16 rounded-3xl shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/20 rounded-full -mr-32 -mt-32 animate-float-slow"></div>
           <div className="flex items-center space-x-4 mb-4">
             <Camera className="w-12 h-12 text-red-600" />
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight relative z-10">
+            <h2 className="text-4xl md:text-5xl font-black text-black tracking-tight relative z-10">
               UNSERE ARBEITEN
             </h2>
           </div>
-          <p className="text-lg text-gray-300 max-w-3xl relative z-10">
+          <p className="text-lg text-gray-700 max-w-3xl relative z-10">
             Ein Einblick in unsere professionellen Installationen und hochwertigen Lösungen
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mt-4 relative z-10"></div>
