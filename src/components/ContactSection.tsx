@@ -87,8 +87,9 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-black text-black mb-1">ÖFFNUNGSZEITEN</h4>
-                    <p className="text-gray-700 font-medium">Mo-Fr: 9:00 - 18:00 Uhr</p>
-                    <p className="text-gray-700 font-medium">Sa: Nach Vereinbarung</p>
+                    <p className="text-gray-700 font-medium">Mo–Fr: 08:00–17:00 Uhr</p>
+                    <p className="text-gray-700 font-medium">Sa: nach Vereinbarung</p>
+                    <p className="text-gray-700 font-medium">So: geschlossen</p>
                   </div>
                 </div>
               </div>
