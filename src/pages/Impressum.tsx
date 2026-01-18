@@ -58,8 +58,8 @@ export default function Impressum() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Registereintrag</h2>
             <p className="text-slate-700 mb-2">
               <strong>Eintragung im Handelsregister</strong><br />
-              Registergericht: [Amtsgericht]<br />
-              Registernummer: [HRA-Nummer]
+              Registergericht: Amtsgericht Würzburg<br />
+              Registernummer: HRA 5887
             </p>
           </section>
 
@@ -67,7 +67,7 @@ export default function Impressum() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Umsatzsteuer-ID</h2>
             <p className="text-slate-700">
               Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-              DE[Umsatzsteuer-ID]
+              DE251741111
             </p>
           </section>
 
