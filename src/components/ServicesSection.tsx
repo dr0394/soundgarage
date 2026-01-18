@@ -107,8 +107,8 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-white to-gray-50 p-12 rounded-xl shadow-2xl">
-          <h3 className="text-3xl md:text-4xl font-black text-black mb-8 tracking-tight">
+        <div className="bg-gradient-to-br from-white to-gray-50 p-6 sm:p-12 rounded-xl shadow-2xl">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-8 tracking-tight break-words">
             UNSERE PRODUKTKATEGORIEN
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
