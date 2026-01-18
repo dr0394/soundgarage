@@ -3,7 +3,6 @@ import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import TrustSection from './components/TrustSection';
 import TargetAudienceSection from './components/TargetAudienceSection';
-import ProblemSolutionSection from './components/ProblemSolutionSection';
 import ServicesSection from './components/ServicesSection';
 import GallerySection from './components/GallerySection';
 import WhyUsSection from './components/WhyUsSection';
@@ -26,7 +25,6 @@ function App() {
       <Navigation onOpenForm={() => setIsFormOpen(true)} />
       <HeroSection onOpenForm={() => setIsFormOpen(true)} />
       <TrustSection />
-      <ProblemSolutionSection />
       <ServicesSection />
       <GallerySection />
       <WhyUsSection />
