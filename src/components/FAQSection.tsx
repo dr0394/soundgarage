@@ -16,26 +16,6 @@ export default function FAQSection() {
     {
       question: 'Welche Fahrzeugtypen bearbeiten Sie?',
       answer: 'Wir arbeiten mit allen Fahrzeugtypen: PKW, Wohnmobile, Nutzfahrzeuge, Boote und Oldtimer. Jedes Fahrzeug erhält eine individuelle Lösung, perfekt abgestimmt auf die technischen Gegebenheiten und Ihre Anforderungen.'
-    },
-    {
-      question: 'Bleibt meine Fahrzeuggarantie erhalten?',
-      answer: 'Ja, bei fachgerechter Installation durch unser geschultes Team bleibt die Herstellergarantie Ihres Fahrzeugs erhalten. Wir arbeiten nach Herstellervorgaben, verwenden Original-Adapter und dokumentieren alle Arbeitsschritte.'
-    },
-    {
-      question: 'Welche Marken und Produkte bieten Sie an?',
-      answer: 'Wir führen alle führenden Premium-Marken wie Pioneer, Alpine, Sony, JBL, Focal, Audison, Helix und viele mehr. In unserem Ladengeschäft können Sie Produkte anfassen, testen und vergleichen. Wir beraten Sie ehrlich zu den besten Optionen für Ihr Budget.'
-    },
-    {
-      question: 'Was kostet eine typische Installation?',
-      answer: 'Die Kosten variieren je nach Umfang und gewählten Komponenten. Eine einfache Radio-Installation beginnt bei wenigen hundert Euro, während High-End-Soundsysteme mehrere tausend Euro kosten können. Wir erstellen Ihnen vorab ein transparentes Angebot ohne versteckte Kosten.'
-    },
-    {
-      question: 'Bieten Sie auch Reparaturen an?',
-      answer: 'Ja, wir reparieren defekte Car-HiFi-Anlagen, Navigationssysteme und Alarmanlagen. Häufig können wir vorhandene Systeme wieder funktionsfähig machen oder durch moderne Komponenten ersetzen. Sprechen Sie uns an – wir finden eine Lösung.'
-    },
-    {
-      question: 'Gibt es Garantie auf Ihre Arbeiten?',
-      answer: 'Ja, auf unsere fachgerechten Installationen geben wir Garantie. Die genauen Konditionen besprechen wir mit Ihnen im Angebot. Zusätzlich profitieren Sie von der Herstellergarantie auf alle verbauten Komponenten.'
     }
   ];
 
