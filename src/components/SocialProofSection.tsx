@@ -47,7 +47,7 @@ export default function SocialProofSection() {
   ];
 
   return (
-    <section id="referenzen" className="py-20 bg-[#1a1a1a]">
+    <section id="referenzen" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white p-12 mb-16">
           <div className="flex items-center space-x-4 mb-4">
