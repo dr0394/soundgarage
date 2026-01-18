@@ -41,10 +41,7 @@ export default function ProcessSection() {
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight">
             SO EINFACH GEHT'S
           </h2>
-          <p className="text-lg text-gray-700">
-            In 5 Schritten zu Ihrem perfekten Sound- und Sicherheitssystem
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mt-4"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800"></div>
         </div>
 
         <div className="relative">

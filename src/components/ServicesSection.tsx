@@ -67,10 +67,7 @@ export default function ServicesSection() {
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight relative z-10">
             UNSERE LEISTUNGEN
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl relative z-10">
-            Von der Beratung bis zur Installation – bei uns erhalten Sie alles aus einer Hand
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mt-4 relative z-10"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 relative z-10"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-20">
