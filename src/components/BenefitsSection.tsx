@@ -1,4 +1,5 @@
-import { Zap, Shield, Heart, Headphones, Sparkles, Car } from 'lucide-react';
+import { Zap, Shield, Heart, Headphones, Sparkles, Car, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function BenefitsSection() {
   const benefits = [
@@ -34,6 +35,30 @@ export default function BenefitsSection() {
     }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % benefits.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [isPaused, benefits.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + benefits.length) % benefits.length);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % benefits.length);
+  };
+
   return (
     <section className="py-20 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,21 +70,66 @@ export default function BenefitsSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 relative z-10"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
+        <div
+          className="relative"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="overflow-hidden">
             <div
-              key={index}
-              className="bg-white p-8 rounded-3xl hover:bg-gradient-to-br hover:from-red-600 hover:to-red-800 group transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-3 border-2 border-transparent hover:border-red-600 relative overflow-hidden"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-black to-gray-800 rounded-2xl group-hover:bg-white mb-4 shadow-lg group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 relative z-10">
-                <benefit.icon className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-black text-black group-hover:text-white mb-2 tracking-tight transition-colors duration-300 relative z-10">{benefit.title}</h3>
-              <p className="text-gray-700 group-hover:text-white leading-relaxed font-medium transition-colors duration-300 relative z-10">{benefit.description}</p>
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="w-full flex-shrink-0 px-4"
+                >
+                  <div className="bg-white p-12 rounded-3xl hover:bg-gradient-to-br hover:from-red-600 hover:to-red-800 group transition-all duration-500 shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-red-600 relative overflow-hidden max-w-2xl mx-auto">
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-black to-gray-800 rounded-3xl group-hover:bg-white mb-6 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500 relative z-10">
+                        <benefit.icon className="w-10 h-10 text-white group-hover:text-blue-600 transition-colors duration-300" />
+                      </div>
+                      <h3 className="text-3xl font-black text-black group-hover:text-white mb-4 tracking-tight transition-colors duration-300 relative z-10">{benefit.title}</h3>
+                      <p className="text-xl text-gray-700 group-hover:text-white leading-relaxed font-medium transition-colors duration-300 relative z-10">{benefit.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <button
+            onClick={goToPrevious}
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+            aria-label="Vorheriger Vorteil"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          <button
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+            aria-label="Nächster Vorteil"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          <div className="flex justify-center gap-3 mt-8">
+            {benefits.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? 'bg-red-600 w-12'
+                    : 'bg-gray-400 hover:bg-gray-300'
+                }`}
+                aria-label={`Gehe zu Vorteil ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
