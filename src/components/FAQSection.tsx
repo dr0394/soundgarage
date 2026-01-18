@@ -6,36 +6,36 @@ export default function FAQSection() {
 
   const faqs = [
     {
+      question: 'Wie läuft die Beratung ab?',
+      answer: 'Wir nehmen uns Zeit für Sie und Ihre Bedürfnisse. In einem persönlichen Gespräch analysieren wir Ihr Fahrzeug, besprechen Ihre Wünsche und erarbeiten gemeinsam eine passende Lösung. Dabei zeigen wir Ihnen transparent alle Möglichkeiten und Kosten auf – ohne Verkaufsdruck.'
+    },
+    {
       question: 'Wie lange dauert eine Installation?',
-      answer: 'Die Dauer hängt vom Umfang der Installation ab. Eine einfache Radio-Installation dauert ca. 2-3 Stunden, während komplexe Soundsystem-Umbauten 1-2 Tage in Anspruch nehmen können. Wir informieren Sie vorab genau über den Zeitrahmen.'
+      answer: 'Je nach Umfang: Einfache Radio-Installation 2-3 Stunden, Apple CarPlay/Android Auto Nachrüstung 3-5 Stunden, komplexe Soundsystem-Umbauten 1-2 Tage. Wir informieren Sie vorab genau über den Zeitrahmen und halten vereinbarte Termine zuverlässig ein.'
     },
     {
-      question: 'Welche Marken bieten Sie an?',
-      answer: 'Wir arbeiten mit allen führenden Premium-Marken zusammen, darunter Pioneer, Alpine, JBL, Focal, Audison, Helix, und viele mehr. In der Beratung zeigen wir Ihnen die besten Optionen für Ihr Budget und Ihre Anforderungen.'
+      question: 'Welche Fahrzeugtypen bearbeiten Sie?',
+      answer: 'Wir arbeiten mit allen Fahrzeugtypen: PKW, Wohnmobile, Nutzfahrzeuge, Boote und Oldtimer. Jedes Fahrzeug erhält eine individuelle Lösung, perfekt abgestimmt auf die technischen Gegebenheiten und Ihre Anforderungen.'
     },
     {
-      question: 'Bleibt die Fahrzeuggarantie erhalten?',
-      answer: 'Ja, bei fachgerechter Installation durch unser geschultes Team bleibt die Herstellergarantie Ihres Fahrzeugs erhalten. Wir arbeiten nach Herstellervorgaben und verwenden Original-Adapter.'
+      question: 'Bleibt meine Fahrzeuggarantie erhalten?',
+      answer: 'Ja, bei fachgerechter Installation durch unser geschultes Team bleibt die Herstellergarantie Ihres Fahrzeugs erhalten. Wir arbeiten nach Herstellervorgaben, verwenden Original-Adapter und dokumentieren alle Arbeitsschritte.'
     },
     {
-      question: 'Kann ich auch gebrauchte Komponenten verbauen lassen?',
-      answer: 'Grundsätzlich ja, allerdings empfehlen wir neue Komponenten für optimale Qualität und Garantieansprüche. Gerne beraten wir Sie zu den besten Lösungen in verschiedenen Preisklassen.'
+      question: 'Welche Marken und Produkte bieten Sie an?',
+      answer: 'Wir führen alle führenden Premium-Marken wie Pioneer, Alpine, Sony, JBL, Focal, Audison, Helix und viele mehr. In unserem Ladengeschäft können Sie Produkte anfassen, testen und vergleichen. Wir beraten Sie ehrlich zu den besten Optionen für Ihr Budget.'
     },
     {
-      question: 'Bieten Sie auch Finanzierung an?',
-      answer: 'Wir können Ihnen verschiedene Finanzierungsmöglichkeiten vermitteln. Sprechen Sie uns einfach darauf an, wir finden gemeinsam eine passende Lösung.'
+      question: 'Was kostet eine typische Installation?',
+      answer: 'Die Kosten variieren je nach Umfang und gewählten Komponenten. Eine einfache Radio-Installation beginnt bei wenigen hundert Euro, während High-End-Soundsysteme mehrere tausend Euro kosten können. Wir erstellen Ihnen vorab ein transparentes Angebot ohne versteckte Kosten.'
     },
     {
-      question: 'Welche Fahrzeugtypen statten Sie aus?',
-      answer: 'Wir arbeiten mit allen Fahrzeugtypen: PKW, Wohnmobile, Nutzfahrzeuge, Oldtimer und Motorräder. Jedes Fahrzeug erhält eine individuelle Lösung, perfekt abgestimmt auf die Gegebenheiten.'
+      question: 'Bieten Sie auch Reparaturen an?',
+      answer: 'Ja, wir reparieren defekte Car-HiFi-Anlagen, Navigationssysteme und Alarmanlagen. Häufig können wir vorhandene Systeme wieder funktionsfähig machen oder durch moderne Komponenten ersetzen. Sprechen Sie uns an – wir finden eine Lösung.'
     },
     {
-      question: 'Kann ich bei der Installation zuschauen?',
-      answer: 'Selbstverständlich! Wir zeigen Ihnen gerne unsere Arbeit und erklären jeden Schritt. Viele Kunden schätzen den Einblick in die professionelle Installation.'
-    },
-    {
-      question: 'Gibt es eine Garantie auf die Installation?',
-      answer: 'Ja, auf unsere Arbeiten geben wir Garantie. Die genauen Konditionen besprechen wir mit Ihnen im Angebot. Zusätzlich profitieren Sie von der Herstellergarantie auf alle verbauten Komponenten.'
+      question: 'Gibt es Garantie auf Ihre Arbeiten?',
+      answer: 'Ja, auf unsere fachgerechten Installationen geben wir Garantie. Die genauen Konditionen besprechen wir mit Ihnen im Angebot. Zusätzlich profitieren Sie von der Herstellergarantie auf alle verbauten Komponenten.'
     }
   ];
 
@@ -73,9 +73,12 @@ export default function FAQSection() {
         </div>
 
         <div className="mt-12 text-center">
+          <p className="text-gray-700 mb-6 font-bold text-lg">
+            Noch Fragen? Wir beraten Sie gerne persönlich!
+          </p>
           <a
             href="tel:09313538565"
-            className="inline-block bg-black text-white px-8 py-4 rounded-xl hover:bg-red-600 transition-all font-black tracking-wide"
+            className="inline-block bg-black text-white px-8 py-4 rounded-xl hover:bg-red-600 transition-all font-black tracking-wide shadow-xl hover:shadow-2xl hover:scale-105"
           >
             JETZT ANRUFEN: 0931-3538565
           </a>

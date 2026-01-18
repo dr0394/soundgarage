@@ -24,14 +24,14 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
             </h1>
 
             <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
-              Wir erarbeiten mit jedem Kunden eine passende Lösung für dessen Bedürfnisse und zeigen klar und ehrlich die Lösung sowie die Kosten für das jeweilige Vorhaben auf.
+              Als führender Car-HiFi-Spezialist in Unterfranken realisieren wir seit Jahrzehnten hochwertige und individuelle Fahrzeuglösungen – von Soundsystemen über Apple CarPlay & Android Auto bis hin zu Alarmanlagen und Reisemobiltechnik. Mit persönlicher Beratung, professioneller Installation und ehrlichem Service sorgen wir für perfekten Klang, maximale Funktionalität und höchste Sicherheit – abgestimmt auf jedes Fahrzeug und jedes Budget.
             </p>
 
             <button
               onClick={onOpenForm}
               className="bg-red-600 text-white px-8 py-4 rounded-2xl hover:bg-red-700 transition-all font-black text-lg tracking-wide inline-block shadow-2xl hover:shadow-red-600/50 hover:scale-105 hover:-translate-y-1"
             >
-              TERMIN VEREINBAREN
+              JETZT BERATUNGSTERMIN VEREINBAREN
             </button>
 
             <div className="flex items-center space-x-4 group/item hover:scale-105 transition-all duration-300 cursor-pointer pt-4">

@@ -1,4 +1,4 @@
-import { Users, Wrench, Lightbulb, Volume2, Navigation, Shield } from 'lucide-react';
+import { Users, Wrench, Lightbulb, Volume2, Navigation, Shield, Smartphone, Truck } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [
@@ -29,17 +29,32 @@ export default function ServicesSection() {
     {
       icon: Volume2,
       title: 'Car HiFi & Soundsysteme',
-      description: 'Premium-Soundsysteme für ultimativen Hörgenuss'
+      description: 'Premium-Soundsysteme für kristallklaren Klang und perfekten Bass'
+    },
+    {
+      icon: Smartphone,
+      title: 'Apple CarPlay & Android Auto',
+      description: 'Moderne Smartphone-Integration für alle Fahrzeuge'
     },
     {
       icon: Navigation,
       title: 'Navigationssysteme',
-      description: 'Moderne Navigation für alle Fahrzeugtypen'
+      description: 'Aktuelle Navigation mit Live-Verkehrsinformationen'
     },
     {
       icon: Shield,
-      title: 'Alarmanlagen',
-      description: 'Zuverlässiger Schutz für Ihr Fahrzeug'
+      title: 'Alarmanlagen & Sicherheit',
+      description: 'Zuverlässiger Schutz vor Diebstahl und Einbruch'
+    },
+    {
+      icon: Truck,
+      title: 'Reisemobil- & Fahrzeugtechnik',
+      description: 'Speziallösungen für Wohnmobile, Nutzfahrzeuge und Boote'
+    },
+    {
+      icon: Wrench,
+      title: 'Reparatur & Nachrüstung',
+      description: 'Professionelle Reparatur und Nachrüstung fehlender Ausstattung'
     }
   ];
 
@@ -96,7 +111,7 @@ export default function ServicesSection() {
           <h3 className="text-3xl md:text-4xl font-black text-black mb-8 tracking-tight">
             UNSERE PRODUKTKATEGORIEN
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {productCategories.map((category, index) => (
               <div
                 key={index}
@@ -108,8 +123,8 @@ export default function ServicesSection() {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-700 mt-8 font-bold">
-            FÜR AUTO, WOHNMOBIL UND NUTZFAHRZEUGE
+          <p className="text-center text-gray-700 mt-8 font-bold text-lg">
+            FÜR PKW, WOHNMOBIL, NUTZFAHRZEUG UND BOOT
           </p>
         </div>
       </div>

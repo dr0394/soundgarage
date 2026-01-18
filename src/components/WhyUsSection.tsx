@@ -4,33 +4,33 @@ export default function WhyUsSection() {
   const reasons = [
     {
       icon: Award,
-      title: 'Über 20 Jahre Erfahrung',
-      description: 'Langjährige Expertise in Car HiFi, Navigation und Sicherheitstechnik'
-    },
-    {
-      icon: ThumbsUp,
-      title: 'Top-Qualität garantiert',
-      description: 'Wir arbeiten nur mit Premium-Marken und hochwertigen Komponenten'
+      title: 'Seit 1988 in der Branche',
+      description: 'In der Branche tätig seit 1988, vollzeit-selbstständig seit 1998 – über 35 Jahre Erfahrung'
     },
     {
       icon: Users,
-      title: 'Persönlicher Service',
-      description: 'Individuelle Beratung und auf Ihre Bedürfnisse zugeschnittene Lösungen'
+      title: 'Persönliche Beratung',
+      description: 'Individuelle Beratung und Konzeptentwicklung ohne Verkaufsdruck – ehrlich und transparent'
+    },
+    {
+      icon: ThumbsUp,
+      title: 'Große Produktvielfalt',
+      description: 'Umfangreiches Sortiment im eigenen Ladengeschäft – zum Anfassen und Testen'
     },
     {
       icon: Shield,
-      title: 'Fachgerechte Installation',
-      description: 'Geschulte Techniker installieren ohne Schäden an Ihrem Fahrzeug'
+      title: 'Professionelle Installation',
+      description: 'Fachgerechte Installation auf höchstem Niveau – ohne Schäden an Ihrem Fahrzeug'
     },
     {
       icon: Clock,
-      title: 'Transparente Abwicklung',
-      description: 'Klare Kostenaufstellung und zuverlässige Terminplanung'
+      title: 'Ehrlicher Umgang',
+      description: 'Vertrauensbasierte Zusammenarbeit statt Verkaufsdruck – langfristige Kundenbeziehungen'
     },
     {
       icon: TrendingUp,
       title: 'Faire Preise',
-      description: 'Erstklassige Qualität zu fairen und transparenten Preisen'
+      description: 'Transparente Kostenaufstellung und faire Preise für alle Budgets'
     }
   ];
 
@@ -62,7 +62,7 @@ export default function WhyUsSection() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full -ml-48 -mb-48 animate-float"></div>
           <div className="grid md:grid-cols-3 gap-8 text-center relative z-10">
             <div className="group/item hover:scale-125 transition-all duration-500 cursor-pointer">
-              <p className="text-5xl md:text-6xl font-black mb-2 bg-gradient-to-br from-white to-gray-200 bg-clip-text text-transparent group-hover/item:scale-110 transition-transform duration-300">20+</p>
+              <p className="text-5xl md:text-6xl font-black mb-2 bg-gradient-to-br from-white to-gray-200 bg-clip-text text-transparent group-hover/item:scale-110 transition-transform duration-300">35+</p>
               <p className="text-white/90 font-bold tracking-wide group-hover/item:text-white transition-colors">JAHRE ERFAHRUNG</p>
             </div>
             <div className="group/item hover:scale-125 transition-all duration-500 cursor-pointer">

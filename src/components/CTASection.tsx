@@ -13,11 +13,11 @@ export default function CTASection({ onOpenForm }: CTASectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight drop-shadow-lg animate-fade-in-up">
-            BEREIT FÜR IHR<br/>
-            PERFEKTES SOUNDSYSTEM?
+            BEREIT FÜR IHRE<br/>
+            INDIVIDUELLE LÖSUNG?
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto font-medium animate-fade-in-up" style={{ animationDelay: '0.2s', opacity: 0 }}>
-            Vereinbaren Sie jetzt Ihren kostenlosen Beratungstermin
+            Kontaktieren Sie uns für eine ehrliche, persönliche Beratung – per WhatsApp, Telefon oder E-Mail
           </p>
 
           <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
@@ -25,7 +25,7 @@ export default function CTASection({ onOpenForm }: CTASectionProps) {
               onClick={onOpenForm}
               className="group bg-black text-white px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition-all duration-300 font-black text-lg tracking-wide flex items-center space-x-2 shadow-2xl hover:shadow-white/20 hover:scale-110 hover:-translate-y-1"
             >
-              <span>KOSTENLOSE BERATUNG</span>
+              <span>JETZT KONTAKT AUFNEHMEN</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
           </div>
