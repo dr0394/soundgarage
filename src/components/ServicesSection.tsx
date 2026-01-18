@@ -90,7 +90,7 @@ export default function ServicesSection() {
               </div>
               <div className="p-8">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-black to-gray-800 rounded-2xl mb-6 group-hover:bg-white transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:scale-110 group-hover:-rotate-6 relative z-10">
-                  <service.icon className="w-8 h-8 text-white group-hover:text-black transition-all duration-300" />
+                  <service.icon className="w-8 h-8 text-white group-hover:text-red-600 transition-all duration-300" />
                 </div>
                 <h3 className="text-2xl font-black text-black group-hover:text-white mb-4 tracking-tight transition-colors duration-300 relative z-10">{service.title}</h3>
                 <p className="text-gray-700 group-hover:text-white mb-6 leading-relaxed font-medium transition-colors duration-300 relative z-10">{service.description}</p>

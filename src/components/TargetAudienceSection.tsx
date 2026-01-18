@@ -43,7 +43,7 @@ export default function TargetAudienceSection() {
               className="bg-white p-8 rounded-3xl border-4 border-black hover:bg-gradient-to-br hover:from-black hover:to-gray-800 hover:text-white group transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-3"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl group-hover:bg-white mb-6 shadow-lg group-hover:scale-110 transition-all duration-500">
-                <audience.icon className="w-8 h-8 text-white group-hover:text-black transition-colors duration-300" />
+                <audience.icon className="w-8 h-8 text-white group-hover:text-red-600 transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-black text-black group-hover:text-white mb-3 tracking-tight transition-colors duration-300">{audience.title}</h3>
               <p className="text-gray-700 group-hover:text-gray-300 leading-relaxed font-medium transition-colors duration-300">{audience.description}</p>

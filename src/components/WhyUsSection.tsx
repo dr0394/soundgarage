@@ -49,7 +49,7 @@ export default function WhyUsSection() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl group-hover:bg-white mb-6 shadow-lg group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 relative z-10">
-                <reason.icon className="w-7 h-7 text-white group-hover:text-black transition-colors duration-300" />
+                <reason.icon className="w-7 h-7 text-white group-hover:text-red-600 transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-black text-black group-hover:text-white mb-3 tracking-tight transition-colors duration-300 relative z-10">{reason.title}</h3>
               <p className="text-gray-700 group-hover:text-gray-300 leading-relaxed font-medium transition-colors duration-300 relative z-10">{reason.description}</p>
