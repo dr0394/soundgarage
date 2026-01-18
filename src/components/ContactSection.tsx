@@ -31,7 +31,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="kontakt" className="py-20 bg-[#1a1a1a]">
+    <section id="kontakt" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-white via-gray-50 to-white p-12 mb-16 rounded-xl shadow-2xl">
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight">
