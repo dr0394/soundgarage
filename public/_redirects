@@ -1,0 +1,37 @@
+# 301 Redirects von alten URLs zur neuen Sound Garage Website
+
+# Alte Hauptseite -> Neue Homepage
+/index.html / 301
+/home / 301
+
+# Alte Service-Seiten -> Neue Services-Sektion
+/services //#services 301
+/dienstleistungen //#services 301
+/lackierung //#services 301
+/folierung //#services 301
+/wrapping //#services 301
+
+# Alte Kontakt-Seiten -> Neue Kontakt-Sektion
+/kontakt //#kontakt 301
+/contact //#kontakt 301
+/anfrage //#kontakt 301
+
+# Alte Galerie/Portfolio -> Neue Galerie
+/galerie //#galerie 301
+/gallery //#galerie 301
+/portfolio //#galerie 301
+/projekte //#galerie 301
+
+# Alte Über Uns -> Neue Über Uns Sektion
+/ueber-uns //#ueber-uns 301
+/about //#ueber-uns 301
+/team //#ueber-uns 301
+
+# Rechtliche Seiten (falls alte URLs existierten)
+/datenschutz /datenschutz 301
+/impressum /impressum 301
+/privacy /datenschutz 301
+/imprint /impressum 301
+
+# Fallback: Alle anderen alten URLs -> Homepage
+/* / 301
