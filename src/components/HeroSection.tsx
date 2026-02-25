@@ -6,7 +6,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onOpenForm }: HeroSectionProps) {
   return (
-    <section className="pt-20 min-h-screen bg-[#1a1a1a] relative overflow-hidden">
+    <section className="pt-20 min-h-screen bg-[#1a1a1a] relative overflow-hidden" role="banner" aria-label="Hero section">
       <div className="absolute top-0 left-0 w-full h-32 bg-white"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16 pb-20">
@@ -19,9 +19,9 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tighter">
-              IHR FAHRZEUG<br />
-              VERDIENT MEHR
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tighter" itemProp="headline">
+              Car HiFi Veitshöchheim<br />
+              <span className="text-red-600">Premium Soundsysteme</span>
             </h1>
 
             {/* Description, Button & Reviews - Only visible on desktop */}
@@ -62,8 +62,11 @@ export default function HeroSection({ onOpenForm }: HeroSectionProps) {
               <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-red-600 to-red-800 z-0 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 rounded-3xl"></div>
               <img
                 src="https://i.imgur.com/mhXtPeP.jpeg"
-                alt="Premium Car Audio Installation"
+                alt="Car HiFi Einbau Veitshöchheim - Sound-Garage Premium Installation"
                 className="relative z-10 w-full h-[500px] object-cover shadow-2xl transition-all duration-500 group-hover:scale-[1.02] rounded-3xl"
+                loading="eager"
+                fetchPriority="high"
+                itemProp="image"
               />
               <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/50 to-transparent rounded-3xl"></div>
             </div>
